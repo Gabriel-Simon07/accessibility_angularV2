@@ -6,7 +6,7 @@ import { ModalRef, ModalService } from './shared/components/modal/services/modal
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   @ViewChild('modal') public modalTemplateRef: TemplateRef<any>;
   @ViewChild('template1') public template1: TemplateRef<any>;
   @ViewChild('template2') public template2: TemplateRef<any>;
@@ -16,10 +16,13 @@ export class AppComponent {
   public firstName = 'Gabriel';
   public modalRef: ModalRef;
 
-  constructor(private modalService: ModalService) {}
+  constructor(
+    private modalService: ModalService,
+    private cd: ChangeDetectorRef) {}
 
   public ngAfterViewInit(): void {
     this.selectedTemplate = this.template1;
+    this.cd.detectChanges();
   }
 
   public show() {
