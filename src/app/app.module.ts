@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from './shared/components/modal/modal.module';
 import { ModalComponent } from './shared/components/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ModalComponent } from './shared/components/modal/modal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModalModule
+    ModalModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [
     ModalComponent

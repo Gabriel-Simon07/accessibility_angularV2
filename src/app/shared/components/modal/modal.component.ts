@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { dashCaseToCamelCase } from "@angular/compiler/src/util";
+import { AfterViewInit, ChangeDetectorRef, Component, HostBinding } from "@angular/core";
 import { ModalConfig } from "./interfaces/modal-config";
 
 @Component({
@@ -7,6 +8,5 @@ import { ModalConfig } from "./interfaces/modal-config";
  styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-
   public config: ModalConfig;
 }
