@@ -6,7 +6,7 @@ import { ModalService } from "./services/modal.service";
 
 @NgModule({
   declarations: [ModalComponent],
-  imports: [CommonModule, FocusTrapModule],
+  imports: [CommonModule, FocusTrapModule, FocusTrapModule],
   exports: [ModalComponent],
   providers: [ModalService]
 })
