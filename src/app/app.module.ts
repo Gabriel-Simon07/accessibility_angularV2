@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ModalModule } from './shared/components/modal/modal.module';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     ModalModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   entryComponents: [
     ModalComponent
